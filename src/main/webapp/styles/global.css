@@ -1,0 +1,171 @@
+/* styles.css */
+:root {
+	--primary-color: #343A40;
+	--secondary-color: #4C6EF5;
+	--secondary-color-1: #748FFC;
+	--tertiary-color: #F8F9FA;
+	--gray-color: #DEE2E6;
+	--font: Montserrat, Helvetica, sans-serif;
+}
+
+body {
+	font-family: var(--font);
+	color: var(--primary-color);
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 20px;
+	border: 1px solid #ddd;
+	padding: 10px;
+	vertical-align: middle;
+}
+
+p {
+	margin: 5px 0;
+}
+
+input {
+	border: 1;
+	border-color: var(--gray-color);
+	border-style: solid;
+	border-radius: 0.25rem;
+	height: 1.5rem;
+	width: 250px;
+}
+
+button {
+	width: 100px;
+	height: 30px;
+}
+
+.pageHeader {
+	min-width: 200px;
+	font-weight: 900;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.subtitle {
+	color: var(--secondary-color);
+}
+
+.userCard {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* Vertically center align the items */
+}
+
+.userCardContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.btn {
+	width: 100px;
+	height: 30px;
+	border-width: 0;
+	border-radius: 0.25rem;
+	background-color: var(--secondary-color);
+	color: var(--tertiary-color);
+	font-family: var(--font);
+}
+
+.btn:hover {
+	background-color: var(--secondary-color-1);
+	color: var(--tertiary-color);
+}
+
+.btn:active {
+	background-color: var(--tertiary-color);
+	color: var(--secondary-color);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 350px;
+    background-color: var(--tertiary-color);
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    margin: 0;
+    padding: 2.5rem;
+}
+
+.modal.active .modal-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.edit-form label {
+    margin-bottom: 1rem;
+}
+
+.edit-form input {
+    margin-bottom: 1rem;
+}
+
+.input-field-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#save-button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#editModal {
+	display: none;
+}
